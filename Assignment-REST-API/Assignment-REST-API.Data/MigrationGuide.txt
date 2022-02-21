@@ -1,0 +1,5 @@
+﻿Update-Database -Project Assignment-REST-API.Data -StartUp Assignment-REST-API.WebService -Verbose
+
+Add-Migration Assignment-REST-API0001 -Project Assignment-REST-API.Data -StartUp Assignment-REST-API.WebService -Verbose
+
+Script-Migration -From Assignment-REST-API0001 -Project Assignment-REST-API.Data -StartUp Assignment-REST-API.WebService -Verbose

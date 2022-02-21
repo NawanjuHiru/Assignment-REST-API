@@ -9,6 +9,6 @@ namespace Assignment_REST_API.Business.Interface
 {
     public interface ISAPService
     {
-        List<SAPViewModel> GetSAP();
+        List<SAPViewModel> GetSAPDetails();
     }
 }

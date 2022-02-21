@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.14" />
@@ -13,12 +14,19 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.14">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assignment-REST-API.Business\Assignment-REST-API.Business.csproj" />
+    <ProjectReference Include="..\Assignment-REST-API.Data\Assignment-REST-API.Data.csproj" />
+    <ProjectReference Include="..\Assignment-REST-API.Model\Assignment-REST-API.Model.csproj" />
   </ItemGroup>
 
 </Project>

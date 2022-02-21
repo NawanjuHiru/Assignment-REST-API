@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Assignment-REST-API.Data\Assignment-REST-API.Data.csproj" />
     <ProjectReference Include="..\Assignment-REST-API.ViewModel\Assignment-REST-API.ViewModel.csproj" />
   </ItemGroup>
 

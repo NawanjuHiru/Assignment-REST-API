@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Assignment_REST_API.Model.REST
 {
-    public class Site
+    public class SAP
     {
+        public int BP { get; set; }
+        public int ARCode { get; set; }
+        public string ARName { get; set; }
+        public int SAPCode { get; set; }
+        public bool Status { get; set; }
+        public bool ARCategory { get; set; }
+        public string Spoc1 { get; set; }
+        public string Spoc2 { get; set; }
+        public string NDReference { get; set; }
         public int SiteId { get; set; }
         public string Description { get; set; }
         public string Project { get; set; }
@@ -19,10 +28,14 @@ namespace Assignment_REST_API.Model.REST
         public bool RiskLevel { get; set; }
         public DateTime OnAirDate2 { get; set; }
         public string Remarks { get; set; }
+        public long Id { get; set; }
+        public DateTime YearMonth { get; set; }
+        public bool Commitment { get; set; }
+        public int Actual { get; set; }
         public string UpdatedBy { get; set; }
         public DateTime UpdatedDate { get; set; }
 
-        public virtual ICollection<SAP> SAPs { get; set; }
-
+        // public virtual ICollection<Site> Sites { get; set; }
+        //public virtual ICollection<Amount> Amounts { get; set; }
     }
 }

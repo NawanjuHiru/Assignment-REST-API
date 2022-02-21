@@ -10,7 +10,7 @@ namespace Assignment_REST_API.ViewModel.REST
     {
         public int BP { get; set; }
         public int ARCode { get; set; }
-        public int ARName { get; set; }
+        public string ARName { get; set; }
         public int SAPCode { get; set; }
         public bool Status { get; set; }
         public bool ARCategory { get; set; }
