@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment_REST_API.Data.Data
 {
-    public class REST_APIContext : DbContext
+    public class REST_APIContext
     {
     }
 }
