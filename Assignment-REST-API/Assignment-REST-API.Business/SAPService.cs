@@ -24,7 +24,6 @@ namespace Assignment_REST_API.Business
         public SAPViewModel GetDataBySapCode(int sapCode)
         {
 
-
             var query = assignmentDb.Saps.Where(x => x.SAPCode == sapCode).FirstOrDefault();
             
             var vm = new SAPViewModel
