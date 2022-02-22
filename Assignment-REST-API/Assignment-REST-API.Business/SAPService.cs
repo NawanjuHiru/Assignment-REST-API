@@ -21,49 +21,42 @@ namespace Assignment_REST_API.Business
             this.config = config;
         }
 
-        public List<SAPViewModel> GetSAPDetails()
+        public SAPViewModel GetDataBySapCode(int sapCode)
         {
-            var response = new List<SAPViewModel>();
 
-            var query = assignmentDb.Saps.Where(u => u.Status == true);
 
-            var SAPList = query.ToList();
-
-            foreach (var item in SAPList)
+            var query = assignmentDb.Saps.Where(x => x.SAPCode == sapCode).FirstOrDefault();
+            
+            var vm = new SAPViewModel
             {
-                var vm = new SAPViewModel
-                {
-                    BP = item.BP,
-                    ARCode = item.ARCode,
-                    ARName = item.ARName,
-                    SAPCode = item.SAPCode,
-                    Status = item.Status,
-                    ARCategory = item.ARCategory,
-                    Spoc1 = item.Spoc1,
-                    Spoc2 = item.Spoc2,
-                    NDReference = item.NDReference,
-                    SiteId = item.SiteId,
-                    Description = item.Description,
-                    Project = item.Project,
-                    Provision = item.Provision,
-                    OnAirDate1 = item.OnAirDate1,
-                    LastUpdate = item.LastUpdate,
-                    ProjectStatus = item.ProjectStatus,
-                    TargetWeek = item.TargetWeek,
-                    RiskLevel = item.RiskLevel,
-                    OnAirDate2 = item.OnAirDate2,
-                    Remarks = item.Remarks,
-                    UpdatedBy = item.UpdatedBy,
-                    UpdatedDate = item.UpdatedDate,
-                    YearMonth = item.YearMonth,
-                    Commitment = item.Commitment,
-                    Actual = item.Actual,
-                };
+                BP = query.BP,
+                ARCode = query.ARCode,
+                ARName = query.ARName,
+                SAPCode = query.SAPCode,
+                Status = query.Status,
+                ARCategory = query.ARCategory,
+                Spoc1 = query.Spoc1,
+                Spoc2 = query.Spoc2,
+                NDReference = query.NDReference,
+                SiteId = query.SiteId,
+                Description = query.Description,
+                Project = query.Project,
+                Provision = query.Provision,
+                OnAirDate1 = query.OnAirDate1,
+                LastUpdate = DateTime.UtcNow,
+                ProjectStatus = query.ProjectStatus,
+                TargetWeek = query.TargetWeek,
+                RiskLevel = query.RiskLevel,
+                OnAirDate2 = query.OnAirDate2,
+                Remarks = query.Remarks,
+                UpdatedBy = query.UpdatedBy,
+                UpdatedDate = DateTime.UtcNow,
+                YearMonth = query.YearMonth,
+                Commitment = query.Commitment,
+                Actual = query.Actual,
+            };
 
-                response.Add(vm);
-            }
-
-            return response;
+            return (vm);
         }
     }
 }

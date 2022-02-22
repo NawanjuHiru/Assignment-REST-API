@@ -21,9 +21,9 @@ namespace Assignment_REST_API.Data.Migrations
 
             modelBuilder.Entity("Assignment_REST_API.Model.REST.SAP", b =>
                 {
-                    b.Property<long>("SAPCode")
+                    b.Property<int>("SAPCode")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
+                        .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<bool>("ARCategory")
@@ -77,8 +77,8 @@ namespace Assignment_REST_API.Data.Migrations
                     b.Property<bool>("RiskLevel")
                         .HasColumnType("bit");
 
-                    b.Property<long>("SiteId")
-                        .HasColumnType("bigint");
+                    b.Property<int>("SiteId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Spoc1")
                         .HasColumnType("nvarchar(max)");

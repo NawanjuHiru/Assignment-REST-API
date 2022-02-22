@@ -11,7 +11,7 @@ namespace Assignment_REST_API.Data.Migrations
                 name: "Basic_Data",
                 columns: table => new
                 {
-                    SAPCode = table.Column<long>(type: "bigint", nullable: false)
+                    SAPCode = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BP = table.Column<int>(type: "int", nullable: false),
                     ARCode = table.Column<int>(type: "int", nullable: false),
@@ -21,7 +21,7 @@ namespace Assignment_REST_API.Data.Migrations
                     Spoc1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Spoc2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NDReference = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SiteId = table.Column<long>(type: "bigint", nullable: false),
+                    SiteId = table.Column<int>(type: "int", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Project = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Provision = table.Column<string>(type: "nvarchar(max)", nullable: true),
