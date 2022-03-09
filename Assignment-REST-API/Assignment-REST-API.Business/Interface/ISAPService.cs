@@ -11,5 +11,6 @@ namespace Assignment_REST_API.Business.Interface
     {
         SAPViewModel GetDataBySapCode(int sapCode);
         SAPCodesViewModel GetSapCodes();
+        AmountsViewModel GetAmountDetails(int sapCode);
     }
 }

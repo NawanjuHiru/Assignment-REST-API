@@ -19,17 +19,24 @@ namespace Assignment_REST_API.WebService.Controllers
             this.sapService = sapService;
         }
 
-        [HttpGet("{sapCode}")]
-        public ActionResult GetDataBySapCode(int sapCode)
-        {
-            var response = sapService.GetDataBySapCode(sapCode);
-            return Ok(response);
-        }
+        //[HttpGet("{sapCode}")]
+        //public ActionResult GetDataBySapCode(int sapCode)
+        //{
+        //    var response = sapService.GetDataBySapCode(sapCode);
+        //    return Ok(response);
+        //}
 
         [HttpGet]
         public ActionResult GetSapCodes()
         {
             var response = sapService.GetSapCodes();
+            return Ok(response);
+        }
+
+        [HttpGet("{sapCode}")]
+        public ActionResult GetAmountDetails(int sapCode)
+        {
+            var response = sapService.GetAmountDetails(sapCode);
             return Ok(response);
         }
     }

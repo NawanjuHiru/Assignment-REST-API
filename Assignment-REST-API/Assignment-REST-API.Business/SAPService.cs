@@ -69,5 +69,39 @@ namespace Assignment_REST_API.Business
 
             return (vm);
         }
+
+        //public AmountsViewModel GetAmountDetails(int sapCode)
+        //{
+        //    var query = assignmentDb.Saps.Where(x => x.SAPCode == sapCode).FirstOrDefault();
+
+        //    var vm = new AmountsViewModel
+        //    {
+        //        SAPCode = query.SAPCode,
+        //        YearMonth = query.YearMonth,
+        //        Commitment = query.Commitment,
+        //        Actual = query.Actual,
+        //        UpdatedBy = query.UpdatedBy,
+        //        LastUpdate = query.LastUpdate,
+        //    };
+
+        //    return (vm);
+        //}
+
+        public AmountsViewModel GetAmountDetails(int sapCode)
+        {
+            var query = assignmentDb.Saps.Where(x => x.SAPCode == sapCode).FirstOrDefault();
+
+            var vm = new AmountsViewModel
+            {
+                SAPCode = query.SAPCode,
+                YearMonth = query.YearMonth,
+                Commitment = query.Commitment,
+                Actual = query.Actual,
+                UpdatedBy = query.UpdatedBy,
+                LastUpdate = query.LastUpdate,
+            };
+
+            return (vm);
+        }
     }
 }
