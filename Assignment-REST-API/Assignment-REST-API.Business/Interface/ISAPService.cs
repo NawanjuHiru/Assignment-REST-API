@@ -10,5 +10,6 @@ namespace Assignment_REST_API.Business.Interface
     public interface ISAPService
     {
         SAPViewModel GetDataBySapCode(int sapCode);
+        SAPCodesViewModel GetSapCodes();
     }
 }

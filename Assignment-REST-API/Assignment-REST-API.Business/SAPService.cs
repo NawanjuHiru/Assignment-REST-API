@@ -57,5 +57,17 @@ namespace Assignment_REST_API.Business
 
             return (vm);
         }
+
+        public SAPCodesViewModel GetSapCodes()
+        {
+            var query = assignmentDb.Saps.Where(x => x.Status == true).FirstOrDefault();
+
+            var vm = new SAPCodesViewModel
+            {
+                SAPCode = query.SAPCode,
+            };
+
+            return (vm);
+        }
     }
 }

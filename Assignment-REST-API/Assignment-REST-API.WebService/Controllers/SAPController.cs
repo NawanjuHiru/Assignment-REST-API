@@ -25,5 +25,12 @@ namespace Assignment_REST_API.WebService.Controllers
             var response = sapService.GetDataBySapCode(sapCode);
             return Ok(response);
         }
+
+        [HttpGet]
+        public ActionResult GetSapCodes()
+        {
+            var response = sapService.GetSapCodes();
+            return Ok(response);
+        }
     }
 }
